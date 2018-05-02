@@ -118,7 +118,7 @@ game.ball = {
     width: 22,
     height: 22,
     frame: 0,
-    x: 340,
+    x: (640 - 22) / 2,
     y: 278,
     dx: 0,
     dy: 0,
@@ -191,13 +191,14 @@ game.ball = {
 };
 
 game.platform = {
-    x: 300,
+    width: 104,
+    height: 24,
+    x: (640 - 104) / 2,
     y: 300,
     velocity: 6,
     dx: 0,
     ball: game.ball,
-    width: 104,
-    height: 24,
+    
     releaseBall: function(){
         if (this.ball) {
             this.ball.jump();
